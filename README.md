@@ -27,6 +27,14 @@ Main.panel.statusArea.aggregateMenu.menu.toggle()
 
 Ultimately you'll have to read through the extension code to figure out what to add for new menus such as connecting signals to watch for shortcut changes and adding new extension settings keys, etc. Only consider using this if it either already does what you want, or you're willing to look at the code to extend it for other menus you want to use it for.
 
+I realize I haven't provided the extension in a nice folder, so you'll need to put the extension files into a folder named:
+
+```
+menu-toggler@carmanaught
+```
+
+Then you'll need to enable the extension and reload gnome-shell (Alt+F2, type 'r', Enter/Return), then specify a keybinding.
+
 ## Credits
 
 Thanks to Jonny Lamb and Pawel Bogut for some of the code ideas I copied from the [Hide Legacy Tray](https://github.com/jonnylamb/shell-hide-legacy-tray) extension and Tudmotu for some code and ideas from the [Clipboard Indicator](https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator) extension.
