@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema path="/org/gnome/shell/extensions/menu-toggler/" id="org.gnome.shell.extensions.menu-toggler">
+    <key name="aggregate-menu" type="as">
+      <default><![CDATA[['']]]></default>
+      <summary>Aggregate/User menu toggle</summary>
+      <description>Keybinding to toggle the aggregate/user menu</description>
+    </key>
+    <key name="app-menu" type="as">
+      <default><![CDATA[['']]]></default>
+      <summary>Application Menu toggle</summary>
+      <description>Keybinding to toggle the application menu (appmenu)</description>
+    </key>
+  </schema>
+</schemalist>
