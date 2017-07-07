@@ -35,8 +35,8 @@ function buildPrefsWidget() {
 
     let treeView = createKeybindingWidget();
     // Create key bindings here using the const names defined in config.js for each menu you want
-    addKeybinding(treeView.model, settings, config.aggregate_menu, "Toggle the aggregate/user menu (aggregateMenu)");
-    addKeybinding(treeView.model, settings, config.app_menu, "Toggle the application menu (appMenu)");
+    addKeybinding(treeView.model, settings, config.aggregate_menu, "Toggle the aggregate/user menu (" + config.aggregate_menu_name + ")");
+    addKeybinding(treeView.model, settings, config.app_menu, "Toggle the application menu (" + config.app_menu_name + ")");
 
     let scrolled = new Gtk.ScrolledWindow();
     scrolled.vexpand = true;

@@ -43,15 +43,7 @@ function disable() {
 }
 
 function toggleMenu(menuName) {
-    // Add the if checks here and use the relevant menu here
-    if (menuName == 'aggregate-menu') {
-        menuToggle = Main.panel.statusArea.aggregateMenu;
-    }
-    if (menuName == 'app-menu') {
-        menuToggle = Main.panel.statusArea.appMenu;
-    }
-    
-    menuToggle.menu.toggle();
+    Main.panel.statusArea[menuName].menu.toggle();
 }
 
 function bindShortcut(configName, funcName) {
@@ -71,15 +63,10 @@ function bindShortcut(configName, funcName) {
 
 function bindShortcuts() {
     unbindShortcuts();
-    // Bind each shortcut here. User the function to be able to pass the config.js key to
-    // use it with an if check (because I'm lazy and haven't though of a better way of 
-    // doing this yet)
-    bindShortcut(config.aggregate_menu, function(){
-        toggleMenu(config.aggregate_menu);
-    });
-    bindShortcut(config.app_menu, function(){
-        toggleMenu(config.app_menu);
-    })
+    // Bind each shortcut here. Use the function to be able to pass the config.js key to
+    // the toggleMenu function. You MUST define a menu name and reference it here.
+    bindShortcut(config.aggregate_menu, function(){ toggleMenu(config.aggregate_menu_name); });
+    bindShortcut(config.app_menu, function(){ toggleMenu(config.app_menu_name); })
 }
 
 function unbindShortcuts() {
