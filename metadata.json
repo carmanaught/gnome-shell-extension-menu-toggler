@@ -6,9 +6,10 @@
   "shell-version": [
     "3.20",
     "3.22",
-    "3.24"
+    "3.24",
+    "3.26"
   ], 
   "url": "http://github.com/carmanaught/gnome-shell-extension-menu-toggler/", 
   "uuid": "menu-toggler@carmanaught", 
-  "version": 2
+  "version": 3
 }

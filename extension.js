@@ -26,10 +26,10 @@ const Convenience = Self.imports.convenience;
 const config = Self.imports.config;
 
 function init() {
-    this.settings = Convenience.getSettings();
+    Settings = Convenience.getSettings()
     // Catch shortcut changes here. Add checks here for more shortcuts as you add them
-    this.settings.connect('changed::' + config.aggregate_menu, Lang.bind(this, refreshBindings));
-    this.settings.connect('changed::' + config.app_menu, Lang.bind(this, refreshBindings));
+    Settings.connect('changed::' + config.aggregate_menu, Lang.bind(this, refreshBindings));
+    Settings.connect('changed::' + config.app_menu, Lang.bind(this, refreshBindings));
     
     this._shortcutsBindingIds = [];
 }
@@ -52,7 +52,7 @@ function bindShortcut(configName, funcName) {
 
     Main.wm.addKeybinding(
         configName,
-        this.settings,
+        Settings,
         Meta.KeyBindingFlags.NONE,
         ModeType.ALL,
         Lang.bind(this, funcName)

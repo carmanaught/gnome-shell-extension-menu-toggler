@@ -9,7 +9,7 @@
  *
  */
 
-const aggregate_menu = 'aggregate-menu';
-const aggregate_menu_name = 'aggregateMenu';
-const app_menu = 'app-menu';
-const app_menu_name = 'appMenu';
+var aggregate_menu = 'aggregate-menu';
+var aggregate_menu_name = 'aggregateMenu';
+var app_menu = 'app-menu';
+var app_menu_name = 'appMenu';

@@ -19,10 +19,10 @@ const COLUMN_DESCRIPTION = 1;
 const COLUMN_KEY         = 2;
 const COLUMN_MODS        = 3;
 
-let settings;
+let Settings;
 
 function init() {
-    this.settings = Convenience.getSettings();
+    Settings = Convenience.getSettings();
 }
 
 function buildPrefsWidget() {
@@ -35,8 +35,8 @@ function buildPrefsWidget() {
 
     let treeView = createKeybindingWidget();
     // Create key bindings here using the const names defined in config.js for each menu you want
-    addKeybinding(treeView.model, settings, config.aggregate_menu, "Toggle the aggregate/user menu (" + config.aggregate_menu_name + ")");
-    addKeybinding(treeView.model, settings, config.app_menu, "Toggle the application menu (" + config.app_menu_name + ")");
+    addKeybinding(treeView.model, Settings, config.aggregate_menu, "Toggle the aggregate/user menu (" + config.aggregate_menu_name + ")");
+    addKeybinding(treeView.model, Settings, config.app_menu, "Toggle the application menu (" + config.app_menu_name + ")");
 
     let scrolled = new Gtk.ScrolledWindow();
     scrolled.vexpand = true;
@@ -91,7 +91,7 @@ function createKeybindingWidget() {
                 // Update the stored setting.
                 let id = model.get_value(iter, COLUMN_ID);
                 let accelString = Gtk.accelerator_name(key, mods);
-                settings.set_strv(id, [accelString]);
+                Settings.set_strv(id, [accelString]);
             });
 
     renderer.connect("accel-cleared",
@@ -105,7 +105,7 @@ function createKeybindingWidget() {
 
                 // Update the stored setting.
                 let id = model.get_value(iter, COLUMN_ID);
-                settings.set_strv(id, []);
+                Settings.set_strv(id, []);
             });
 
     column = new Gtk.TreeViewColumn();
@@ -118,14 +118,14 @@ function createKeybindingWidget() {
     return treeView;
 }
 
-function addKeybinding(model, settings, id, description) {
+function addKeybinding(model, Settings, id, description) {
     // Get the current accelerator.
-    let accelerator = settings.get_strv(id)[0];
+    let accelerator = Settings.get_strv(id)[0];
     let key, mods;
     if (accelerator == null)
         [key, mods] = [0, 0];
     else
-        [key, mods] = Gtk.accelerator_parse(settings.get_strv(id)[0]);
+        [key, mods] = Gtk.accelerator_parse(Settings.get_strv(id)[0]);
 
     // Add a row for the keybinding.
     let row = model.insert(100); // Erm...
