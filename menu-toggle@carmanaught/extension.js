@@ -26,7 +26,7 @@ const Convenience = Self.imports.convenience;
 const config = Self.imports.config;
 
 function init() {
-    Settings = Convenience.getSettings()
+    let Settings = Convenience.getSettings()
     // Catch shortcut changes here. Add checks here for more shortcuts as you add them
     Settings.connect('changed::' + config.aggregate_menu, Lang.bind(this, refreshBindings));
     Settings.connect('changed::' + config.app_menu, Lang.bind(this, refreshBindings));
