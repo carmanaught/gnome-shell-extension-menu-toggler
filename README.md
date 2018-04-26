@@ -1,4 +1,6 @@
 # Menu Toggler
+**Note:** I am no longer actively using GNOME and therefore will not be fixing bugs.
+
 This is a relatively simple extension I pieced together that can be used to toggle menus in GNOME, like the 'Aggregate Menu'/'User Menu' (the one with the Volume/Network/Battery status indicators) or whichever other menu you like. This may be useful if an extension you're using has a menu but no way to quickly toggle it and you'd like some way to bring it up.
 
 This was written as using a keybinding and trying to toggle a menu via gdbus seems to block a subsequent key-press from toggling the menu (or I'm unable to figure out the correct command(s)) but doing it from an extension seems to work fine.
