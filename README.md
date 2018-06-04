@@ -1,3 +1,5 @@
+DEPRECATED: This repository has been deprecated and moved to https://gitlab.com/carmanaught/gnome-shell-extension-menu-toggler/
+
 # Menu Toggler
 **Note:** I am no longer actively using GNOME and therefore will not be fixing bugs.
 
