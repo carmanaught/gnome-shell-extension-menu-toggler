@@ -1,7 +1,6 @@
 DEPRECATED: This repository has been deprecated and moved to https://gitlab.com/carmanaught/gnome-shell-extension-menu-toggler/
 
 # Menu Toggler
-**Note:** I am no longer actively using GNOME and therefore will not be fixing bugs.
 
 This is a relatively simple extension I pieced together that can be used to toggle menus in GNOME, like the 'Aggregate Menu'/'User Menu' (the one with the Volume/Network/Battery status indicators) or whichever other menu you like. This may be useful if an extension you're using has a menu but no way to quickly toggle it and you'd like some way to bring it up.
 
